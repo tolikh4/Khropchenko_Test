@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        [type="text"] {
+            width: 60px;
+            text-align: center;
+        }
+        img {
+            position: absolute;
+            top: 15%;
+            right: 50%;
+            transform: translateX(50%)
+        }
+        .load {
+            display: none;
+        }
+        .load.activ {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000000c7;
+        }
+    </style>
+</head>
+<body style="text-align: center">
+    <div class="load">
+        <img src="load.gif" width="100" alt="">
+    </div>
+    
+    <input type="file" style="display: none">
+    <button>Нажмите и выберите из корня архива файл с числами "random.txt"</button>
+    <div style="margin-top: 15px">
+        <div>
+            <p>Количество 0, и количество 1</p>
+            <input class="n0" type="text" readonly> 
+            <input class="n1" type="text" readonly>
+            <div>
+                <input class="n0_per" type="text" readonly> 
+                <input class="n1_per" type="text" readonly> 
+            </div>
+            
+        </div>
+        
+        <div>
+            <p>Количество последовательностей из двух цифр (00, 01, 10, 11)</p>
+            <input class="n00" type="text" readonly> 
+            <input class="n01" type="text" readonly> 
+            <input class="n11" type="text" readonly> 
+            <input class="n10" type="text" readonly>
+            <div>
+                <input class="n00_per" type="text" readonly> 
+                <input class="n01_per" type="text" readonly> 
+                <input class="n11_per" type="text" readonly> 
+                <input class="n10_per" type="text" readonly>
+            </div> 
+        </div>
+        
+        <div class="wrap3">
+           <p>Количество последовательностей из трех цифр (000, 001, 010, 011, 100, 101, 110, 111)</p>
+        </div>
+        
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
